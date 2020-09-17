@@ -9,6 +9,6 @@ sentry-cli releases new -p backend -p frontend $VERSION
 # Associate commits with the release
 sentry-cli releases set-commits --auto $VERSION
 
-echo "version = \"$VERSION\"" > ./sentry_demo/sentry_demon/version.py
+echo "version = \"$VERSION\"" > ./sentry_demo/sentry_demo/version.py
 git add  ./sentry_demo/version.py
 git commit -m "Added version file"
