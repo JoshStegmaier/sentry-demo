@@ -127,6 +127,6 @@ from sentry_demo.version import version
 sentry_sdk.init(
     dsn="https://3a8906dea2b54bed8d985b06e67da5b8@o441734.ingest.sentry.io/5431508",
     integrations=[DjangoIntegration()],
-    send_default_pii=True
+    send_default_pii=True,
     release=version
 )
