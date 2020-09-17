@@ -12,3 +12,5 @@ sentry-cli releases set-commits --auto $VERSION
 echo "version = \"$VERSION\"" > ./sentry_demo/sentry_demo/version.py
 git add  ./sentry_demo/sentry_demo/version.py
 git commit -m "Added version file"
+
+sentry-cli releases finalize "$VERSION"
