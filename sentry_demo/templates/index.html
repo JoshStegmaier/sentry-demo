@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script
+          src="https://browser.sentry-cdn.com/5.23.0/bundle.tracing.min.js"
+          integrity="sha384-lSZkoLgJeNT+V/zBEZAchPik9VPNr9wvgAY6mwoMK5SO/cMsK/whVXKKdQOL1oiw"
+          crossorigin="anonymous"
+        >
+        </script>
+        <script>
+            Sentry.init({
+              dsn: 'https://7192472212434cdb88a08e2d574bb162@o441734.ingest.sentry.io/5431523',
+              release: '{{ version }}',
+            });
+        </script>
+        <script>
+            myUndefinedFunction();
+        </script>
+    </head>
+    <body>
+        <p>
+            {{ text }}
+        </p>
+    </body>
+</html>
