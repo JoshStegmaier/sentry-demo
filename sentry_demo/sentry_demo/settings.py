@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+from sentry_demo.version import version
+VERSION = version
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -122,11 +124,9 @@ STATIC_URL = '/static/'
 import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
 
-from sentry_demo.version import version
-
 sentry_sdk.init(
     dsn="https://3a8906dea2b54bed8d985b06e67da5b8@o441734.ingest.sentry.io/5431508",
     integrations=[DjangoIntegration()],
     send_default_pii=True,
-    release=version
+    release=VERSION
 )

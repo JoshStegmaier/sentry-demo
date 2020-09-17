@@ -10,7 +10,7 @@ def django_error(request):
     return render(request, 'index.html')
 
 def js_error(request):
-    context = {'text': 'Hello world!', 'version' : settings.version}
+    context = {'text': 'Hello world!', 'version' : settings.VERSION}
     return render(request, 'index.html', context)
 
 urlpatterns = [
