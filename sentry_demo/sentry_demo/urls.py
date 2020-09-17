@@ -5,7 +5,7 @@ from django.conf import settings
 
 def django_error(request):
     x = 100
-    y = 99
+    y = 98
     z = 1 / (x - y)
     return render(request, 'index.html')
 
