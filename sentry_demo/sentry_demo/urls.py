@@ -5,8 +5,9 @@ from django.conf import settings
 
 def django_error(request):
     x = 100
-    y = 100
+    y = 99
     z = 1 / (x - y)
+    return render(request, 'index.html')
 
 def js_error(request):
     context = {'text': 'Hello world!', 'version' : settings.version}
